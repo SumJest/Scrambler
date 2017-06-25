@@ -16,5 +16,13 @@ namespace Scrambler
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RCC5 encoder = new RCC5(Encoding.ASCII.GetBytes(textBox1.Text));
+            RCC5 decoder = new RCC5(Encoding.ASCII.GetBytes(textBox1.Text));
+
+            label1.Text = Encoding.ASCII.GetString(decoder.Decode(encoder.Encode(Encoding.ASCII.GetBytes(textBox2.Text))));
+        }
     }
 }
