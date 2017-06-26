@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5E8561B4-F45C-4AEF-866E-F572F550E65E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Scrambler</RootNamespace>
     <AssemblyName>Scrambler</AssemblyName>
@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decode.Designer.cs">
+      <DependentUpon>Decode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encode.Designer.cs">
+      <DependentUpon>Encode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrambler.cs">
@@ -63,6 +75,12 @@
     <Compile Include="Scrambler.Designer.cs">
       <DependentUpon>Scrambler.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Decode.resx">
+      <DependentUpon>Decode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encode.resx">
+      <DependentUpon>Encode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
